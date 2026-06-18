@@ -1,0 +1,223 @@
+:root {
+    --app-primary: #5b3e8e;
+    --app-primary-dark: #46306f;
+    --app-warning: #ffbe04;
+    --app-soft: #f6f2ff;
+    --app-dark: #171321;
+    --app-muted: #6c6575;
+    --app-border: #ece7f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #fbf9ff;
+    color: var(--app-dark);
+}
+
+.app-logo {
+    width: 170px;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    color: #51485f;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--app-primary);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--app-primary);
+    --bs-btn-border-color: var(--app-primary);
+    --bs-btn-hover-bg: var(--app-primary-dark);
+    --bs-btn-hover-border-color: var(--app-primary-dark);
+    --bs-btn-active-bg: var(--app-primary-dark);
+    --bs-btn-active-border-color: var(--app-primary-dark);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--app-primary);
+    --bs-btn-border-color: var(--app-primary);
+    --bs-btn-hover-bg: var(--app-primary);
+    --bs-btn-hover-border-color: var(--app-primary);
+}
+
+.hero-section {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 190, 4, 0.22), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(91, 62, 142, 0.18), transparent 26%),
+        linear-gradient(135deg, #ffffff 0%, #f5efff 100%);
+}
+
+.hero-card {
+    border-radius: 32px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.hero-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.mini-stat {
+    border: 1px solid var(--app-border);
+    border-radius: 22px;
+    padding: 18px;
+    min-height: 132px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.mini-stat i {
+    font-size: 1.4rem;
+}
+
+.mini-stat strong {
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+.mini-stat span {
+    color: var(--app-muted);
+    font-size: .9rem;
+}
+
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--app-primary);
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: .75rem;
+    margin-bottom: .6rem;
+}
+
+.table-card {
+    border-radius: 28px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.table-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(41, 26, 70, .12) !important;
+}
+
+.table-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: var(--app-soft);
+    color: var(--app-primary);
+    font-size: 1.4rem;
+}
+
+.booking-section {
+    background: linear-gradient(180deg, #fbf9ff 0%, #ffffff 100%);
+}
+
+.booking-info-card {
+    top: 94px;
+    border-radius: 28px;
+}
+
+.card {
+    border-radius: 28px;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+    border-color: var(--app-border);
+    min-height: 48px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--app-primary);
+    box-shadow: 0 0 0 .2rem rgba(91, 62, 142, .12);
+}
+
+.input-group-text {
+    background: #fff;
+    color: var(--app-primary);
+}
+
+.flow-list {
+    display: grid;
+    gap: 18px;
+}
+
+.flow-item {
+    display: flex;
+    gap: 14px;
+}
+
+.flow-item span {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--app-primary);
+    color: #fff;
+    font-weight: 800;
+}
+
+.flow-item p {
+    color: var(--app-muted);
+    margin-bottom: 0;
+    font-size: .92rem;
+}
+
+.admin-body {
+    background: #f7f4fb;
+}
+
+.admin-hero {
+    background:
+        radial-gradient(circle at top right, rgba(255, 190, 4, .22), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f4edff 100%);
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+}
+
+.note-cell {
+    max-width: 260px;
+}
+
+.table > :not(caption) > * > * {
+    padding: 1rem 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+    .hero-img {
+        height: 300px;
+    }
+
+    .booking-info-card {
+        position: static !important;
+    }
+}
